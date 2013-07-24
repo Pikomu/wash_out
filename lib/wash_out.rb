@@ -4,7 +4,6 @@ require 'wash_out/dispatcher'
 require 'wash_out/soap'
 require 'wash_out/router'
 require 'wash_out/type'
-require 'wash_out/model'
 require 'wash_out/wsse'
 require 'wash_out/middleware'
 
@@ -22,7 +21,6 @@ module ActionDispatch::Routing
 end
 
 Mime::Type.register "application/soap+xml", :soap
-ActiveRecord::Base.send :extend, WashOut::Model if defined?(ActiveRecord)
 
 ActionController::Renderers.add :soap do |what, options|
   _render_soap(what, options)

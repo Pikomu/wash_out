@@ -133,9 +133,6 @@ end
 
 To use defined type inside your inline declaration, pass the class instead of type symbol (`:fluffy => Fluffy`).
 
-Note that WashOut extends the `ActiveRecord` so every model you use is already a WashOut::Type and can be used
-inside your interface declarations.
-
 ## Configuration
 
 Use `config.wash_out...` inside your environment configuration to setup WashOut.
